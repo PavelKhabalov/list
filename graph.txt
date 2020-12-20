@@ -1,0 +1,27 @@
+digraph structs {
+rankdir=LR;
+{edge[color=white];"0" -> "1" -> "2" -> "3" -> "4" -> "5" -> "6" -> "7" -> "8" -> "9" -> "10";
+}
+{rank = same; "0"; e0 [style = "filled", color = "#fd7e82", shape=record, label="value: 0.000000 | next: 0 | prev: 0"];}
+{rank = same; "1"; e1 [style = "filled", color = "#b5bdfc", shape=record, label="value: 1.500000 | next: 2 | prev: 0"];}
+{rank = same; "2"; e2 [style = "filled", color = "#b5bdfc", shape=record, label="value: 2.500000 | next: 4 | prev: 1"];}
+{rank = same; "3"; e3 [style = "filled", color = "#8ff5b9", shape=record, label="value: 3.500000 | next: 7 | prev: -1"];}
+{rank = same; "4"; e4 [style = "filled", color = "#b5bdfc", shape=record, label="value: 4.500000 | next: 6 | prev: 2"];}
+{rank = same; "5"; e5 [style = "filled", color = "#8ff5b9", shape=record, label="value: 5.500000 | next: 3 | prev: -1"];}
+{rank = same; "6"; e6 [style = "filled", color = "#b5bdfc", shape=record, label="value: 6.000000 | next: 0 | prev: 4"];}
+{rank = same; "7"; e7 [style = "filled", color = "#8ff5b9", shape=record, label="value: 0.000000 | next: 8 | prev: -1"];}
+{rank = same; "8"; e8 [style = "filled", color = "#8ff5b9", shape=record, label="value: 0.000000 | next: 9 | prev: -1"];}
+{rank = same; "9"; e9 [style = "filled", color = "#8ff5b9", shape=record, label="value: 0.000000 | next: 10 | prev: -1"];}
+{rank = same; "10"; e10 [style = "filled", color = "#8ff5b9", shape=record, label="value: 0.000000 | next: 0 | prev: -1"];}
+e1 -> e2;
+e2 -> e1;
+e2 -> e4;
+e4 -> e2;
+e4 -> e6;
+e6 -> e4;
+e5 -> e3[color="green"];
+e3 -> e7[color="green"];
+e7 -> e8[color="green"];
+e8 -> e9[color="green"];
+e9 -> e10[color="green"];
+}
